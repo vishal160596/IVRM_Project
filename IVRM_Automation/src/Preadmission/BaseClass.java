@@ -1,10 +1,8 @@
 package Preadmission;
 
-import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Options;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -12,18 +10,15 @@ import org.testng.annotations.BeforeMethod;
 public class BaseClass
 {
 	public WebDriver driver;
-    @BeforeMethod
-    public void open() throws InterruptedException
-    {
-    	System.setProperty("webdriver.gecko.driver","./Software/geckodriver.exe");
-	    WebDriver driver=new FirefoxDriver();
-	    
- 	    // driver.manage().window().maximize();
- 	    // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
- 	     driver.get("https://ivrmstaging.vapssmartecampus.com/#/login/");
- 	     Thread.sleep(5000);
- 	     
-    }
+	@BeforeMethod
+	public void openapp() throws InterruptedException
+	{
+		System.setProperty("webdriver.gecko.driver", "./Software/geckodriver.exe");
+		driver = new FirefoxDriver();
+		driver.get("https://ivrmstaging.vapssmartecampus.com/#/login/");
+		Thread.sleep(8000);
+	}
+	
     
     
    @AfterMethod
