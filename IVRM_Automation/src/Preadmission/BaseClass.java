@@ -15,10 +15,8 @@ public class BaseClass
     @BeforeMethod
     public void open() throws InterruptedException
     {
-    	System.setProperty("webdriver.chrome.driver","./Software/chromedriver.exe");
-    	//ChromeOptions options=new ChromeOptions();
-    	//options.addArguments("--remote-allow-origin=*");
-	    WebDriver driver=new ChromeDriver();
+    	System.setProperty("webdriver.gecko.driver","./Software/geckodriver.exe");
+	    WebDriver driver=new FirefoxDriver();
 	    
  	    // driver.manage().window().maximize();
  	    // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
